@@ -164,7 +164,7 @@
 		E118E9FD1E37DE3B00223C47 /* TakeoverNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeoverNotification.swift; sourceTree = "<group>"; };
 		E118E9FF1E37E28400223C47 /* InAppButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppButton.swift; sourceTree = "<group>"; };
 		E118EA011E37F3A700223C47 /* MiniNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiniNotification.swift; sourceTree = "<group>"; };
-		E12782B31D4AB4B30025FB05 /* Mixpanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mixpanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E12782B31D4AB4B30025FB05 /* MixpanelSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MixpanelSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E12BD38C1D91EBE2008989C9 /* SHA256.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA256.swift; sourceTree = "<group>"; };
 		E142DBD01D75F86300F34C12 /* ObjectSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectSerializer.swift; sourceTree = "<group>"; };
 		E142DBD21D76263600F34C12 /* ObjectSerializerContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectSerializerContext.swift; sourceTree = "<group>"; };
@@ -232,7 +232,7 @@
 		E1D335CB1D303A0D00E68E12 /* FlushRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlushRequest.swift; sourceTree = "<group>"; };
 		E1D335CD1D30578E00E68E12 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E1D335CF1D3059A800E68E12 /* AutomaticProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutomaticProperties.swift; sourceTree = "<group>"; };
-		E1F15FC91E64A10700391AE3 /* Mixpanel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Mixpanel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1F15FC91E64A10700391AE3 /* MixpanelSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MixpanelSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05767531F8D909600499D9B /* ConnectIntegrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectIntegrations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,8 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				E115947D1CFF1491007F8B4F /* MixpanelSwift.framework */,
-				E12782B31D4AB4B30025FB05 /* Mixpanel.framework */,
-				E1F15FC91E64A10700391AE3 /* Mixpanel.framework */,
+				E12782B31D4AB4B30025FB05 /* MixpanelSwift.framework */,
+				E1F15FC91E64A10700391AE3 /* MixpanelSwift.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -618,7 +618,7 @@
 			);
 			name = Mixpanel_tvOS;
 			productName = Mixpanel_tvOS;
-			productReference = E12782B31D4AB4B30025FB05 /* Mixpanel.framework */;
+			productReference = E12782B31D4AB4B30025FB05 /* MixpanelSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E1F15FC81E64A10700391AE3 /* Mixpanel_macOS */ = {
@@ -636,7 +636,7 @@
 			);
 			name = Mixpanel_macOS;
 			productName = Mixpanel_OSX;
-			productReference = E1F15FC91E64A10700391AE3 /* Mixpanel.framework */;
+			productReference = E1F15FC91E64A10700391AE3 /* MixpanelSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -994,6 +994,7 @@
 				PRODUCT_NAME = MixpanelSwift;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}";
+				SWIFT_MODULE_NAME = MixpanelSwift;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1023,6 +1024,7 @@
 				PRODUCT_NAME = MixpanelSwift;
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}";
+				SWIFT_MODULE_NAME = MixpanelSwift;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -1047,8 +1049,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D TV_OS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mixpanel.Mixpanel;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = Mixpanel;
+				PRODUCT_MODULE_NAME = MixpanelSwift;
+				PRODUCT_NAME = MixpanelSwift;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1075,8 +1077,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D TV_OS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mixpanel.Mixpanel;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = Mixpanel;
+				PRODUCT_MODULE_NAME = MixpanelSwift;
+				PRODUCT_NAME = MixpanelSwift;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1107,8 +1109,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "-D MAC_OS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mixpanel.Mixpanel;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = Mixpanel;
+				PRODUCT_MODULE_NAME = MixpanelSwift;
+				PRODUCT_NAME = MixpanelSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1137,8 +1139,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "-D MAC_OS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mixpanel.Mixpanel;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = Mixpanel;
+				PRODUCT_MODULE_NAME = MixpanelSwift;
+				PRODUCT_NAME = MixpanelSwift;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
